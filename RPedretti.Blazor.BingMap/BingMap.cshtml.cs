@@ -1,4 +1,4 @@
-﻿using Microsoft.AspNetCore.Blazor.Components;
+﻿using Microsoft.AspNetCore.Components;
 using Microsoft.JSInterop;
 using RPedretti.Blazor.BingMap.Collections;
 using RPedretti.Blazor.BingMap.Entities;
@@ -14,7 +14,7 @@ using System.Threading.Tasks;
 
 namespace RPedretti.Blazor.BingMap
 {
-    public partial class BingMapBase : BlazorComponent, IDisposable
+    public partial class BingMapBase : ComponentBase, IDisposable
     {
         #region Fields
         private const string _mapNamespace = "rpedrettiBlazorComponents.bingMaps.map";

@@ -1,4 +1,4 @@
-﻿using Microsoft.AspNetCore.Blazor.Builder;
+﻿using Microsoft.AspNetCore.Components.Builder;
 using Microsoft.JSInterop;
 
 namespace RPedretti.Blazor.BingMap.Extensions
@@ -7,8 +7,8 @@ namespace RPedretti.Blazor.BingMap.Extensions
     {
         #region Methods
 
-        public static IBlazorApplicationBuilder UseBingMaps(
-            this IBlazorApplicationBuilder applicationBuilder,
+        public static IComponentsApplicationBuilder UseBingMaps(
+            this IComponentsApplicationBuilder applicationBuilder,
             string apiKey,
             string mapLanguage = null)
         {

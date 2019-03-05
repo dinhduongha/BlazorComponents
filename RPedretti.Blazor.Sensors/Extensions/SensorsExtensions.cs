@@ -1,4 +1,4 @@
-﻿using Microsoft.AspNetCore.Blazor.Builder;
+﻿using Microsoft.AspNetCore.Components.Builder;
 using Microsoft.Extensions.DependencyInjection;
 using RPedretti.Blazor.Sensors.AmbientLight;
 using RPedretti.Blazor.Sensors.Geolocation;
@@ -21,7 +21,7 @@ namespace RPedretti.Blazor.Sensors.Extensions
             return services;
         }
 
-        public static void InitAmbientLightSensor(this IBlazorApplicationBuilder app)
+        public static void InitAmbientLightSensor(this IComponentsApplicationBuilder app)
         {
             var sensor = app.Services.GetService<AmbientLightSensor>();
             sensor.Init();

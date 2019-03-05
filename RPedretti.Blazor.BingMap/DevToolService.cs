@@ -1,11 +1,13 @@
-﻿using Microsoft.JSInterop;
+﻿
+using System;
+using System.Linq;
+using System.Collections.Generic;
+using System.Threading.Tasks;
+using Microsoft.JSInterop;
 using Newtonsoft.Json;
+
 using RPedretti.Blazor.BingMap.Entities;
 using RPedretti.Blazor.BingMap.Entities.Pushpin;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 
 namespace RPedretti.Blazor.BingMap
 {

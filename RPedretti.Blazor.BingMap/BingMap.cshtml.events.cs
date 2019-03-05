@@ -1,4 +1,4 @@
-﻿using Microsoft.AspNetCore.Blazor.Components;
+﻿using Microsoft.AspNetCore.Components;
 using Microsoft.JSInterop;
 using RPedretti.Blazor.BingMap.Entities;
 using System;
@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace RPedretti.Blazor.BingMap
 {
-    public partial class BingMapBase : BlazorComponent
+    public partial class BingMapBase : ComponentBase
     {
         #region Fields
 

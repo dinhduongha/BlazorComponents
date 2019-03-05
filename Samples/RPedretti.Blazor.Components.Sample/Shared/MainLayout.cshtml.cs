@@ -1,11 +1,11 @@
-﻿using Microsoft.AspNetCore.Blazor.Components;
-using Microsoft.AspNetCore.Blazor.Layouts;
+﻿using Microsoft.AspNetCore.Components;
+using Microsoft.AspNetCore.Components.Layouts;
 using RPedretti.Blazor.Components.Sample.Managers;
 using System.Collections.Generic;
 
 namespace RPedretti.Blazor.Components.Sample.Shared
 {
-    public class MainLayoutBase : BlazorLayoutComponent
+    public class MainLayoutBase : LayoutComponentBase
     {
         #region Properties
 

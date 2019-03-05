@@ -8,14 +8,14 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
     });
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-const load_external_scripts_1 = require("load-external-scripts");
+const loadScript = require("load-external-scripts");
 const DotNetMapOptions_1 = require("./types/DotNetMapOptions");
 class HereMap {
     constructor() {
         this.initService = (appId, appCode, useCIT = true) => __awaiter(this, void 0, void 0, function* () {
             if (HereMap.platform === undefined) {
-                yield load_external_scripts_1.default({ src: `${HereMap.baseScriptUrl}${HereMap.coreModuleScript}.js`, id: HereMap.coreModuleScript });
-                yield load_external_scripts_1.default({ src: `${HereMap.baseScriptUrl}${HereMap.serviceModuleScript}.js`, id: HereMap.serviceModuleScript });
+                yield loadScript({ src: `${HereMap.baseScriptUrl}${HereMap.coreModuleScript}.js`, id: HereMap.coreModuleScript });
+                yield loadScript({ src: `${HereMap.baseScriptUrl}${HereMap.serviceModuleScript}.js`, id: HereMap.serviceModuleScript });
                 HereMap.platform = new H.service.Platform({
                     app_code: appCode,
                     app_id: appId,
@@ -26,7 +26,7 @@ class HereMap {
             return 1;
         });
         this.loadModules = (modules) => __awaiter(this, void 0, void 0, function* () {
-            yield Promise.all(modules.map(m => load_external_scripts_1.default({ src: `${HereMap.baseScriptUrl}${m}.js`, id: m })));
+            yield Promise.all(modules.map(m => loadScript({ src: `${HereMap.baseScriptUrl}${m}.js`, id: m })));
             if (modules.indexOf("ui") >= 0) {
                 const link = document.createElement('link');
                 link.rel = 'stylesheet';

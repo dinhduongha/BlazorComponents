@@ -1,11 +1,11 @@
 ﻿using Microsoft.AspNetCore.Blazor;
-using Microsoft.AspNetCore.Blazor.Components;
+using Microsoft.AspNetCore.Components;
 using System;
 using System.Collections.Generic;
 
 namespace RPedretti.Blazor.Components
 {
-    public abstract class BaseComponent : BlazorComponent
+    public abstract class BaseComponent : ComponentBase
     {
         #region Methods
 

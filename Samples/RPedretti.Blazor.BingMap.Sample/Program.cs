@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Blazor.Hosting;
+﻿using Microsoft.AspNetCore.Components.Browser;
+using Microsoft.AspNetCore.Blazor.Hosting;
 
 namespace RPedretti.Blazor.BingMap.Sample
 {

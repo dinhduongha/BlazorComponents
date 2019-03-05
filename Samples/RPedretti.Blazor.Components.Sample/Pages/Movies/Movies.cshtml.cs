@@ -1,5 +1,5 @@
-﻿using Cloudcrate.AspNetCore.Blazor.Browser.Storage;
-using Microsoft.AspNetCore.Blazor.Components;
+﻿//using Cloudcrate.AspNetCore.Blazor.Browser.Storage;
+using Microsoft.AspNetCore.Components;
 using RPedretti.Blazor.Components.Sample.Models;
 using RPedretti.Blazor.Components.Sample.Services;
 using System;
@@ -10,7 +10,7 @@ using System.Threading.Tasks;
 
 namespace RPedretti.Blazor.Components.Sample.Pages.Movies
 {
-    public class MoviesBase : BlazorComponent, IDisposable
+    public class MoviesBase : ComponentBase, IDisposable
     {
         #region Fields
 
@@ -22,7 +22,7 @@ namespace RPedretti.Blazor.Components.Sample.Pages.Movies
 
         #region Properties
 
-        [Inject] private LocalStorage _localStorage { get; set; }
+        //[Inject] private LocalStorage _localStorage { get; set; }
 
         [Inject] private IMovieService _movieService { get; set; }
 
@@ -116,10 +116,10 @@ namespace RPedretti.Blazor.Components.Sample.Pages.Movies
                 Movies.AddRange(movies);
             }
 
-            _localStorage.SetItem("movies", Movies);
-            _localStorage.SetItem("moviesCount", MoviesCount);
-            _localStorage.SetItem("pageCount", PageCount);
-            _localStorage.SetItem("movieTitle", SearchMovieTitle);
+            //_localStorage.SetItem("movies", Movies);
+            //_localStorage.SetItem("moviesCount", MoviesCount);
+            //_localStorage.SetItem("pageCount", PageCount);
+            //_localStorage.SetItem("movieTitle", SearchMovieTitle);
 
             Loading = false;
             StateHasChanged();
@@ -127,28 +127,28 @@ namespace RPedretti.Blazor.Components.Sample.Pages.Movies
 
         protected override void OnInit()
         {
-            SearchMovieTitle = _localStorage.GetItem("movieTitle");
-            Movies = _localStorage.GetItem<List<MoviePosterModel>>("movies") ?? new List<MoviePosterModel>();
-            MoviesCount = _localStorage.GetItem<int>("moviesCount");
-            PageCount = _localStorage.GetItem<int>("pageCount");
-            CurrentPage = _localStorage.GetItem<int>("page");
+            //SearchMovieTitle = _localStorage.GetItem("movieTitle");
+            //Movies = _localStorage.GetItem<List<MoviePosterModel>>("movies") ?? new List<MoviePosterModel>();
+            //MoviesCount = _localStorage.GetItem<int>("moviesCount");
+            //PageCount = _localStorage.GetItem<int>("pageCount");
+            //CurrentPage = _localStorage.GetItem<int>("page");
             HasContent = MoviesCount > 0;
         }
 
         protected async void RequestPage(int page)
         {
             await GetMoviesAsync(page);
-            _localStorage.SetItem("page", page);
+            //_localStorage.SetItem("page", page);
             StateHasChanged();
         }
 
         public void Dispose()
         {
-            _localStorage.RemoveItem("movies");
-            _localStorage.RemoveItem("moviesCount");
-            _localStorage.RemoveItem("pageCount");
-            _localStorage.RemoveItem("movieTitle");
-            _localStorage.RemoveItem("page");
+            //_localStorage.RemoveItem("movies");
+            //_localStorage.RemoveItem("moviesCount");
+            //_localStorage.RemoveItem("pageCount");
+            //_localStorage.RemoveItem("movieTitle");
+            //_localStorage.RemoveItem("page");
         }
 
         public void GoToMovie(MoviePosterModel model)

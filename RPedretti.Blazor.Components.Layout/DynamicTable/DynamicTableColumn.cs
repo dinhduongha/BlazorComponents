@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Blazor;
+using Microsoft.AspNetCore.Components;
 using System;
 
 namespace RPedretti.Blazor.Components.Layout.DynamicTable

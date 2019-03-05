@@ -1,4 +1,4 @@
-using Cloudcrate.AspNetCore.Blazor.Browser.Storage;
+//using Cloudcrate.AspNetCore.Blazor.Browser.Storage;
 using Microsoft.AspNetCore.Blazor.Builder;
 using Microsoft.Extensions.DependencyInjection;
 using RPedretti.Blazor.Components.Sample.Managers;
@@ -6,6 +6,7 @@ using RPedretti.Blazor.Components.Sample.Services;
 using RPedretti.Blazor.Sensors.Extensions;
 using Microsoft.Extensions.Logging;
 using Blazor.Extensions.Logging;
+using Microsoft.AspNetCore.Components.Builder;
 
 namespace RPedretti.Blazor.Components.Sample
 {
@@ -13,7 +14,7 @@ namespace RPedretti.Blazor.Components.Sample
     {
         #region Methods
 
-        public void Configure(IBlazorApplicationBuilder app)
+        public void Configure(IComponentsApplicationBuilder app)
         {
             app.AddComponent<App>("app");
             app.InitAmbientLightSensor();
@@ -27,7 +28,7 @@ namespace RPedretti.Blazor.Components.Sample
             services.AddSingleton<NotificationManager>();
             services.AddSingleton<DownloadManager>();
             services.AddSingleton<BlazorHubConnectionManager>();
-            services.AddStorage();
+            //services.AddStorage();
             services.AddAmbientLightSensor();
             services.AddGeolocationSensor();
             services.AddLogging(builder => builder

@@ -1,5 +1,5 @@
 ﻿using Microsoft.AspNetCore.Blazor;
-using Microsoft.AspNetCore.Blazor.Components;
+using Microsoft.AspNetCore.Components;
 using RPedretti.Blazor.Components.Layout.Pager;
 using System;
 

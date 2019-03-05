@@ -1,4 +1,4 @@
-﻿using Microsoft.AspNetCore.Blazor.Components;
+﻿using Microsoft.AspNetCore.Components;
 
 namespace RPedretti.Blazor.Components.Spinner
 {
@@ -10,7 +10,7 @@ namespace RPedretti.Blazor.Components.Spinner
         LARGE
     }
 
-    public class SpinnerBase : BlazorComponent
+    public class SpinnerBase : ComponentBase
     {
         #region Properties
 

@@ -1,5 +1,5 @@
-﻿using Microsoft.AspNetCore.Blazor.Components;
-using Microsoft.AspNetCore.Blazor.Builder;
+﻿using Microsoft.AspNetCore.Components;
+using Microsoft.AspNetCore.Components.Builder;
 
 using System;
 using System.Collections.Generic;

@@ -1,4 +1,4 @@
-﻿using Microsoft.AspNetCore.Blazor.Components;
+﻿using Microsoft.AspNetCore.Components;
 using RPedretti.Blazor.Components.Sample.Managers;
 using RPedretti.Blazor.Shared.Domain;
 using System;

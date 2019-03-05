@@ -1,5 +1,5 @@
 ﻿using Microsoft.AspNetCore.Blazor;
-using Microsoft.AspNetCore.Blazor.Components;
+using Microsoft.AspNetCore.Components;
 using Microsoft.JSInterop;
 using RPedretti.Blazor.Shared.Operators;
 using System;

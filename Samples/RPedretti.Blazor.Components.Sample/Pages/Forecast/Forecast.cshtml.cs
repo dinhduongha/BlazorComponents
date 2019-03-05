@@ -1,4 +1,4 @@
-﻿using Microsoft.AspNetCore.Blazor.Components;
+﻿using Microsoft.AspNetCore.Components;
 using RPedretti.Blazor.Components.Layout.DynamicTable;
 using RPedretti.Blazor.Components.Sample.Domain;
 using RPedretti.Blazor.Components.Sample.Services;

@@ -1,4 +1,4 @@
-﻿using Microsoft.AspNetCore.Blazor.Components;
+﻿using Microsoft.AspNetCore.Components;
 using RPedretti.Blazor.Sensors.AmbientLight;
 using RPedretti.Blazor.Sensors.Geolocation;
 using System;

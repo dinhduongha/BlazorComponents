@@ -8,15 +8,15 @@ using System;
 using System.Linq;
 using System.Collections.Generic;
 using System.Threading.Tasks;
-using Microsoft.AspNetCore.Blazor.Components;
-using Microsoft.Extensions.Logging;
-using Blazor.Extensions.Logging;
+using Microsoft.AspNetCore.Components;
+//using Microsoft.Extensions.Logging;
+//using Blazor.Extensions.Logging;
 
 namespace RPedretti.Blazor.BingMap.Sample.Pages.PushpinPage
 {
     public class PushpinPageBase : BaseComponent, IDisposable
     {
-        [Inject] ILogger<PushpinPageBase> logger { get; set; }
+        //[Inject] ILogger<PushpinPageBase> logger { get; set; }
         private int index = 0;
         private Random rnd = new Random();
 
